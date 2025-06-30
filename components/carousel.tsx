@@ -182,7 +182,7 @@ export const Carousel = () => {
       <div
         ref={cursorRef}
         className={`fixed top-0 left-0 w-12 h-12 rounded-full pointer-events-none flex items-center justify-between text-white font-bold text-lg px-2 transition-opacity duration-300 ${
-          isHovered ? "opacity-100" : "opacity-40"
+          isHovered ? "opacity-100" : "opacity-0"
         }`}
         style={{
           mixBlendMode: "difference",
