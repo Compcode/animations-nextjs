@@ -1,0 +1,57 @@
+
+ /* Work Sans font from google */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: 'Work Sans', system-ui, sans-serif;
+}
+
+body {
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-sans);
+}
+
+
+
+/* smoothness for the mobile view navbar */
+@layer utilities {
+  @keyframes slide-in {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+
+  .animate-slide-in {
+    animation: slide-in 0.5s ease-in forwards;
+  }
+}
+
+
+/* animating the drag scroll */
+.card {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* backdrop text fade animation */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 2s ease-out forwards;
+}
+
+.draggable-track {
+  cursor: none !important;
+}
